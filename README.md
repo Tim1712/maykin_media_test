@@ -1,1 +1,0 @@
-# maykin_media_test
