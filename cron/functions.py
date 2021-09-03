@@ -6,9 +6,9 @@ import pandas
 def load_data():
 
     """
-    First I tried to connect with the HTTP Basic Authentication but unfortunately didn't succeed
-    I tried to connect with "r = requests.get('http://python-demo.maykin.nl/', auth=('python-demo', 'claw30_bumps'))"
-    and other ways but kept getting error code 401
+    First I tried to connect with the HTTP Basic Authentication but unfortunately I didn't succeed.
+    I tried to connect with "r = requests.get('http://python-demo.maykin.nl/', auth=('username', 'password'))"
+    and some other solutions but kept getting error code 401
 
     So instead of the basis authentication I made a Cronjob which runs this function every 30 minutes.
     It checks if there is something new added to the CSV files. if so, he adds the new data to the database.

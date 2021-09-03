@@ -17,7 +17,7 @@
 </head>
 <body>
 
-<!--    Form for choosing a city-->
+<!--Form for choosing a city-->
      <form action="/results" id="CitySelection" method="GET">
         <div class="selector">
             <h2 class="menu_title">Choose city</h2>
@@ -37,7 +37,7 @@
         </div>
     </form>
 
-<!--    Form for adding a new hotel to the database-->
+<!--Form for adding a new hotel to the database-->
     <div class="add_city">
         <form action="" id="AddCity" method="POST">
             {% csrf_token %}
@@ -52,7 +52,7 @@
         </form>
         <br>
 
-<!--        Button to redirect to admin page-->
+<!--Button to redirect to admin page-->
       <form action="/admin" target="_blank">
             <input type="submit" value="Go to admin page" class="btn btn-primary"/>
       </form>

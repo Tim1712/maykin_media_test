@@ -34,6 +34,7 @@ def home(request):
 
 
 def results(request):
+    # Post request for adding a new hotel
     if request.method == 'POST':
         add_hotel(request)
 
