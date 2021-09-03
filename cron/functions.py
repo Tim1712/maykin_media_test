@@ -6,7 +6,7 @@ import pandas
 def load_data():
 
     """
-    Authentication uitlegg
+    
     """
 
     city_data = pandas.read_csv('cron/city.csv', sep=';', header=None)

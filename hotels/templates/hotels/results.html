@@ -1,9 +1,9 @@
 {% extends "hotels/base.html" %}
 {% block content %}
     <div class="results_list">
-        <h1>Your results</h1>
+        <h1>{{ current_city.last }}</h1>
         {% for hotel in hotels %}
-                    <p>-->   {{ hotel }}</p>
+                    <H4>-->   {{ hotel.hotel }}</H4>
         {% endfor %}
     </div>
 

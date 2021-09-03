@@ -20,25 +20,41 @@
 
 </head>
 <body>
-    <div class ="container">
-         <form action="/results" id="CitySelection" method="GET">
+ <form action="/results" id="CitySelection" method="GET">
     <div class="selector">
         <select class="form-control" name="CitySelection" required>
+
             <option value="" selected disabled hidden>Choose here</option>
             {% for cities in cities %}
                 <option value="{{ cities.id }}">{{ cities.city }} </option>
             {% endfor %}
+
         </select>
         <br>
         <br>
         <br>
         <button class="btn btn-primary" type="submit" value="Start">
-                Results
+            Results
         </button>
     </div>
 </form>
-        {% block content %} {% endblock %}
-    </div>
+
+
+ <div class="add_city">
+<form action="" id="AddCity" method="POST">
+    {% csrf_token %}
+    <br>
+    <input class="form-control" id="city_name" type="text" name="city_name" placeholder="Add city name" value="{{ current_name }}" required>
+    <br>
+    <input class="form-control" id="hotel_name" type="text" name="hotel_name" placeholder="Add hotel name" value="{{ current_name }}" required>
+    <br>
+    <input type="submit" value="OK" class="btn btn-primary">
+
+</form>
+</div>
+
+{% block content %} {% endblock %}
+
 
 </body>
 </html>
