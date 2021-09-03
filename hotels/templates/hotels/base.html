@@ -5,13 +5,9 @@
      <!-- Required meta tags -->
     <meta charset="utf-8">
 
-    {% if title %}
-        <title>Title {{ title }}</title>
-    {% else %}
-        <title>Title</title>
-    {% endif %}
+    <title>Hotel finder</title>
 
-
+<!--    Add bootstrap and styles.css-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -20,38 +16,47 @@
 
 </head>
 <body>
- <form action="/results" id="CitySelection" method="GET">
-    <div class="selector">
-        <select class="form-control" name="CitySelection" required>
 
-            <option value="" selected disabled hidden>Choose here</option>
-            {% for cities in cities %}
-                <option value="{{ cities.id }}">{{ cities.city }} </option>
-            {% endfor %}
+<!--    Form for choosing a city-->
+     <form action="/results" id="CitySelection" method="GET">
+        <div class="selector">
+            <h2 class="menu_title">Choose city</h2>
+            <select class="form-control" name="CitySelection" required>
 
-        </select>
+                <option value="" selected disabled hidden>Choose here</option>
+                {% for cities in cities %}
+                    <option value="{{ cities.id }}">{{ cities.city }} </option>
+                {% endfor %}
+
+            </select>
+            <br>
+            <br>
+            <button class="btn btn-primary" type="submit" value="Start">
+                Results
+            </button>
+        </div>
+    </form>
+
+<!--    Form for adding a new hotel to the database-->
+    <div class="add_city">
+        <form action="" id="AddCity" method="POST">
+            {% csrf_token %}
+            <h2 class="menu_title">Add hotel</h2>
+            <br>
+            <input class="form-control" id="city_name" type="text" name="city_name" placeholder="Add city name" value="{{ current_name }}" required>
+            <br>
+            <input class="form-control" id="hotel_name" type="text" name="hotel_name" placeholder="Add hotel name" value="{{ current_name }}" required>
+            <br>
+            <input type="submit" value="Submit" class="btn btn-primary">
+
+        </form>
         <br>
-        <br>
-        <br>
-        <button class="btn btn-primary" type="submit" value="Start">
-            Results
-        </button>
+
+<!--        Button to redirect to admin page-->
+      <form action="/admin" target="_blank">
+            <input type="submit" value="Go to admin page" class="btn btn-primary"/>
+      </form>
     </div>
-</form>
-
-
- <div class="add_city">
-<form action="" id="AddCity" method="POST">
-    {% csrf_token %}
-    <br>
-    <input class="form-control" id="city_name" type="text" name="city_name" placeholder="Add city name" value="{{ current_name }}" required>
-    <br>
-    <input class="form-control" id="hotel_name" type="text" name="hotel_name" placeholder="Add hotel name" value="{{ current_name }}" required>
-    <br>
-    <input type="submit" value="OK" class="btn btn-primary">
-
-</form>
-</div>
 
 {% block content %} {% endblock %}
 

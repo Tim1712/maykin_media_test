@@ -1,9 +1,10 @@
 {% extends "hotels/base.html" %}
 {% block content %}
+<!--    Add city and the hotels from that city to webpage-->
     <div class="results_list">
-        <h1>{{ current_city.last }}</h1>
+        <h1 class="menu_title">{{ current_city.last }}</h1>
         {% for hotel in hotels %}
-                    <H4>-->   {{ hotel.hotel }}</H4>
+                    <H4>{{ hotel.hotel }}</H4>
         {% endfor %}
     </div>
 
