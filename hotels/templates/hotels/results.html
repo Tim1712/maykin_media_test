@@ -1,7 +1,10 @@
 {% extends "hotels/base.html" %}
 {% block content %}
-    <h1>Your results</h1>
-    {% for hotel in hotels %}
-                <h3>{{ hotel }}</h3>
-    {% endfor %}
+    <div class="results_list">
+        <h1>Your results</h1>
+        {% for hotel in hotels %}
+                    <p>-->   {{ hotel }}</p>
+        {% endfor %}
+    </div>
+
 {% endblock content %}

@@ -13,5 +13,7 @@ def results(request):
     city_id = request.GET['CitySelection']
     city = City.objects.filter(id=city_id)[0]
     context = Hotel.objects.filter(city=city)
-    return render(request, 'hotels/results.html', {'hotels': context})
+    context2 = City.objects.all()
+    return render(request, 'hotels/results.html', {'hotels': context,
+                                                   "cities": context2})
 

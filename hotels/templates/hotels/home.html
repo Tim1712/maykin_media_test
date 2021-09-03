@@ -1,14 +1,5 @@
 {% extends "hotels/base.html" %}
 {% block content %}
-    <form action="/hotels/results" id="CitySelection" method="GET">
-        <select form="CitySelection" name="CitySelection" id="CitySelection" required>
 
-
-            <option value="" disabled selected>Select your city</option>
-            {% for cities in cities %}
-                <option value="{{ cities.id }}">{{ cities.city }} </option>
-            {% endfor %}
-        </select>
-        <input class="button" type="submit" value="Start">
-    </form>
 {% endblock content %}
+

@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b84e0d6d-232d-4070-becc-de068c420622" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/hotels/static/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels/templates/hotels/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/hotels/templates/hotels/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels/templates/hotels/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/hotels/templates/hotels/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels/templates/hotels/results.html" beforeDir="false" afterPath="$PROJECT_DIR$/hotels/templates/hotels/results.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/hotels/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maykin_media_test/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/maykin_media_test/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maykin_media_test/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/maykin_media_test/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +38,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
   </component>
   <component name="RunManager">
     <configuration name="maykin_media_test" type="Python.DjangoServer" factoryName="Django server">
@@ -67,10 +75,30 @@
       <option name="presentableId" value="Default" />
       <updated>1630402982700</updated>
       <workItem from="1630402984376" duration="22461000" />
+      <workItem from="1630487059005" duration="179000" />
+      <workItem from="1630584215432" duration="25000" />
+      <workItem from="1630589554715" duration="97000" />
+      <workItem from="1630589672239" duration="9000" />
+      <workItem from="1630589713911" duration="151000" />
+      <workItem from="1630589892997" duration="5516000" />
+      <workItem from="1630595421261" duration="5469000" />
+      <workItem from="1630659535780" duration="5934000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

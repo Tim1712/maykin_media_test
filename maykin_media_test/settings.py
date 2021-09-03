@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -122,11 +122,17 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'hotels/static')]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'hotels/static')
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
+# Run function "load_data" every 00 and 30 minutes as a cronjob
 CRONJOBS = [
    ('0,30 * * * *', 'cron.functions.load_data', '>> /home/tim/maykin_media/maykin_media_test/cron.log')
 ]
